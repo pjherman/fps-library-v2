@@ -1,0 +1,68 @@
+{
+  "name": "@mikezimm/fps-library-v2",
+  "version": "1.1.79",
+  "description": "Library of reusable typescript/javascript functions, interfaces and constants",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "build": "del-cli \"./?(dist|lib)\" && tsc -p ./tsconfig.json && webpack",
+    "prod": "del-cli \"./?(dist|lib)\" && tsc -p ./tsconfig.json && webpack --mode production",
+    "package": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --config ./webpack.config.cjs",
+    "clean": "del-cli \"./?(dist|lib)\"",
+    "lint": "eslint ./src --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikezimm/fps-library-v2.git"
+  },
+  "keywords": [
+    "SPFx",
+    "functions"
+  ],
+  "author": "Mike Zimmerman",
+  "bugs": {
+    "url": "https://github.com/mikezimm/fps-library-v2/issues"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "files": [
+    "/lib"
+  ],
+  "dependencies": {
+    "@microsoft/sp-property-pane": "^1.15.2",
+    "@mikezimm/fps-pnp2": "^1.0.52",
+    "@mikezimm/fps-styles": "^1.0.51",
+    "@pnp/spfx-controls-react": "3.12.0",
+    "@pnp/spfx-property-controls": "^3.6.0",
+    "office-ui-fabric-react": "^7.199.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-json-view": "^1.21.3"
+  },
+  "devDependencies": {
+    "@types/node": "14.17.6",
+    "@types/react": "16.9.51",
+    "@types/react-dom": "16.9.8",
+    "@types/webpack": "^5.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.23.0",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.0"
+  }
+}
